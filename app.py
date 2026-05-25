@@ -139,10 +139,10 @@ st.set_page_config(
 
 with st.sidebar:
 
-    st.image(
-        "https://saintellectsolutions.com/images/logo.png",
-        width=200
-    )
+   st.image(
+    "logo.png",
+    width=200
+)
 
     st.markdown("## SAIntellect Solutions")
 
