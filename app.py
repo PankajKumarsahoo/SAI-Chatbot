@@ -170,7 +170,7 @@ with st.sidebar:
 # Title
 # --------------------------
 
-st.title("🤖 SAIntellect Website Chatbot")
+st.title("🤖 SAIntellect  Chatbot")
 
 st.markdown(
     """
