@@ -134,6 +134,39 @@ st.set_page_config(
 )
 
 # --------------------------
+# Sidebar
+# --------------------------
+
+with st.sidebar:
+
+    st.image(
+        "https://saintellectsolutions.com/images/logo.png",
+        width=200
+    )
+
+    st.markdown("## SAIntellect Solutions")
+
+    st.info(
+        """
+📍 Bhubaneswar, Odisha
+
+🌐 https://saintellectsolutions.com
+
+🤖 AI Solutions
+
+💻 Website Development
+
+📱 Mobile App Development
+
+📈 Digital Marketing
+        """
+    )
+
+    if st.button("🗑 Clear Chat"):
+        st.session_state.messages = []
+        st.rerun()
+
+# --------------------------
 # Title
 # --------------------------
 
@@ -141,15 +174,15 @@ st.title("🤖 SAIntellect Website Chatbot")
 
 st.markdown(
     """
-    Ask anything about:
+Ask anything about:
 
-    - Company Information
-    - Services
-    - Products
-    - Contact Details
-    - AI Solutions
-    - Training Programs
-    """
+- Company Information
+- Services
+- Products
+- Contact Details
+- AI Solutions
+- Training Programs
+"""
 )
 
 # --------------------------
@@ -165,7 +198,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 # --------------------------
-# Text Input
+# User Input
 # --------------------------
 
 query = st.chat_input(
@@ -191,7 +224,7 @@ if query:
     with st.chat_message("assistant"):
 
         with st.spinner(
-            "Searching website..."
+            "🔍 Searching website..."
         ):
 
             answer = ask_bot(query)
